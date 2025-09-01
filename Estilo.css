@@ -1,0 +1,64 @@
+body{
+        background-image: url('./Picture/fondoimg.png');
+        font-size: 1em;
+    }
+
+
+
+
+    .up-header{
+        text-align: center;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+
+    .li-info{
+        text-align: left;
+        display: inline-block;
+        margin-top: 0;
+    }
+
+
+    .foods{
+        
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr ));
+        gap: 10px;
+    }
+
+    .foods div{ 
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .foods .tosh, .foods .tortilla, .foods .chorizo, .foods .yogur, .foods .gullon, .foods .Salchicha{
+        
+        background-color: rgba(255, 255, 255, 0.8); 
+        border-radius: 10px;
+        
+        text-align: center;
+        color: black;
+        font-family: Arial, sans-serif;
+        padding: 1em;
+    }
+
+   li{
+        text-align: left;
+    }
+    
+
+    img{
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+     }
