@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthy Food PA — Productos Saludables en Panama</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Guia de productos saludables disponibles en Panama. Descubre donde encontrar alimentos nutritivos en El Machetazo, Super 99, Super Extra y mas.">
+    <meta name="keywords" content="productos saludables Panama, comida sana Panama, supermercados Panama, alimentacion saludable">
+    <meta name="author" content="Healthy Food PA">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="Healthy Food PA — Productos Saludables en Panama">
+    <meta property="og:description" content="Descubre productos saludables y donde encontrarlos en los supermercados de Panama.">
+    <meta property="og:image"       content="assets/images/fondoimg.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Healthy Food PA">
+    <meta name="twitter:description" content="Descubre productos saludables y donde encontrarlos en Panama.">
+    <meta name="twitter:image"       content="assets/images/fondoimg.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -18,6 +36,11 @@
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#footer">Contacto</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -49,7 +72,7 @@
 
                 <article class="card">
                     <div class="card-img-wrapper">
-                        <img src="./assets/images/tosh.jpg" alt="Crema de mani Tosh">
+                        <img src="./assets/images/tosh.jpg" alt="Crema de mani Tosh" loading="lazy" width="400" height="210">
                     </div>
                     <div class="card-body">
                         <span class="card-tag">Proteinas</span>
@@ -69,7 +92,7 @@
 
                 <article class="card">
                     <div class="card-img-wrapper">
-                        <img src="./assets/images/Tortilas-la-real.jpg" alt="Tortillas La Real">
+                        <img src="./assets/images/Tortilas-la-real.jpg" alt="Tortillas La Real" loading="lazy" width="400" height="210">
                     </div>
                     <div class="card-body">
                         <span class="card-tag">Granos</span>
@@ -88,7 +111,7 @@
 
                 <article class="card">
                     <div class="card-img-wrapper">
-                        <img src="./assets/images/CHORI.JPG" alt="Chorizo Berard">
+                        <img src="./assets/images/CHORI.JPG" alt="Chorizo Berard" loading="lazy" width="400" height="210">
                     </div>
                     <div class="card-body">
                         <span class="card-tag">Carnes</span>
@@ -107,7 +130,7 @@
 
                 <article class="card">
                     <div class="card-img-wrapper">
-                        <img src="./assets/images/yogurt-griego.jpg" alt="Yogurt Griego Bonlac">
+                        <img src="./assets/images/yogurt-griego.jpg" alt="Yogurt Griego Bonlac" loading="lazy" width="400" height="210">
                     </div>
                     <div class="card-body">
                         <span class="card-tag">Lacteos</span>
@@ -126,7 +149,7 @@
 
                 <article class="card">
                     <div class="card-img-wrapper">
-                        <img src="./assets/images/Gullon.jpg" alt="Galleta Gullon Chocolate">
+                        <img src="./assets/images/Gullon.jpg" alt="Galleta Gullon Chocolate" loading="lazy" width="400" height="210">
                     </div>
                     <div class="card-body">
                         <span class="card-tag">Snacks</span>
@@ -145,12 +168,31 @@
 
                 <article class="card">
                     <div class="card-img-wrapper">
-                        <img src="./assets/images/Salchicha.png" alt="Salchicha de Pavo Berard">
+                        <img src="./assets/images/Salchicha.png" alt="Salchicha de Pavo Berard" loading="lazy" width="400" height="210">
                     </div>
                     <div class="card-body">
                         <span class="card-tag">Carnes</span>
                         <h3>Salchicha de Pavo Berard</h3>
                         <p>Menor contenido graso que la salchicha tradicional, perfecta para dietas balanceadas.</p>
+                        <div class="card-stores">
+                            <h4>Disponible en</h4>
+                            <ul>
+                                <li>El Machetazo</li>
+                                <li>Super Extra</li>
+                                <li>Super 99</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/arroz.jpg" alt="Arroz integral" loading="lazy" width="400" height="210">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Granos</span>
+                        <h3>Arroz Integral</h3>
+                        <p>Rico en fibra y minerales. Una base perfecta para platos saludables y nutritivos.</p>
                         <div class="card-stores">
                             <h4>Disponible en</h4>
                             <ul>
@@ -175,6 +217,24 @@
             <p class="footer-copy">&copy; 2026 Healthy Food PA &mdash; Informacion nutricional para todos.</p>
         </div>
     </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const links  = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => {
+            const open = links.classList.toggle('nav-open');
+            toggle.setAttribute('aria-expanded', open);
+            toggle.classList.toggle('is-open', open);
+        });
+        // Cierra el menu al hacer click en un link
+        links.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                links.classList.remove('nav-open');
+                toggle.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', false);
+            });
+        });
+    </script>
 
 </body>
 </html>
