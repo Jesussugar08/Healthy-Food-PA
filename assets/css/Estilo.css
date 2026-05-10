@@ -1,0 +1,404 @@
+/* ===== VARIABLES ===== */
+:root {
+    --green-dark:  #1b4332;
+    --green-mid:   #2d6a4f;
+    --green-light: #52b788;
+    --green-pale:  #d8f3dc;
+    --accent:      #f9c74f;
+    --white:       #ffffff;
+    --gray-50:     #f8f9fa;
+    --gray-100:    #f1f3f5;
+    --gray-200:    #e9ecef;
+    --gray-400:    #ced4da;
+    --gray-600:    #6c757d;
+    --gray-800:    #343a40;
+    --text:        #212529;
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+    --shadow-lg: 0 12px 30px rgba(0,0,0,.12);
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --transition: 0.25s ease;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--text);
+    background-color: var(--gray-50);
+    line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(27, 67, 50, 0.97);
+    backdrop-filter: blur(12px);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,.8);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+    transition: color var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    min-height: 92vh;
+    background-image: url('../images/fondoimg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(27, 67, 50, 0.92) 0%,
+        rgba(45, 106, 79, 0.78) 55%,
+        rgba(82, 183, 136, 0.45) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 680px;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--green-dark);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: .75rem;
+    padding: .3rem 1rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    opacity: .88;
+    max-width: 530px;
+    margin: 0 auto 2rem;
+    line-height: 1.75;
+}
+
+.hero-pills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .65rem;
+    margin-bottom: 2.5rem;
+}
+
+.pill {
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.25);
+    backdrop-filter: blur(8px);
+    color: var(--white);
+    font-size: .85rem;
+    font-weight: 500;
+    padding: .4rem 1rem;
+    border-radius: 50px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--green-dark);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .9rem 2.75rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(249,199,79,.4);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(249,199,79,.55);
+}
+
+/* ===== PRODUCTS SECTION ===== */
+.products-section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-tag {
+    display: block;
+    color: var(--green-mid);
+    font-weight: 600;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    margin-bottom: .6rem;
+}
+
+.section-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--green-dark);
+    letter-spacing: -0.03em;
+    margin-bottom: .9rem;
+}
+
+.section-header p {
+    color: var(--gray-600);
+    font-size: 1.05rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ===== CARDS ===== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.75rem;
+}
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-img-wrapper {
+    background: var(--green-pale);
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .45s ease;
+}
+
+.card:hover .card-img-wrapper img {
+    transform: scale(1.06);
+}
+
+.card-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-tag {
+    display: inline-block;
+    background: var(--green-pale);
+    color: var(--green-mid);
+    font-size: .72rem;
+    font-weight: 600;
+    padding: .2rem .75rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: .75rem;
+    align-self: flex-start;
+}
+
+.card-body h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--green-dark);
+    letter-spacing: -0.02em;
+    margin-bottom: .5rem;
+}
+
+.card-body > p {
+    color: var(--gray-600);
+    font-size: .9rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+    flex: 1;
+}
+
+.card-stores {
+    border-top: 1px solid var(--gray-200);
+    padding-top: 1rem;
+}
+
+.card-stores h4 {
+    font-size: .73rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    margin-bottom: .55rem;
+}
+
+.card-stores ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+
+.card-stores li {
+    background: var(--gray-100);
+    color: var(--gray-800);
+    font-size: .78rem;
+    font-weight: 500;
+    padding: .22rem .65rem;
+    border-radius: var(--radius-sm);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--green-dark);
+    padding: 3.5rem 2rem;
+    text-align: center;
+}
+
+.footer-inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: .5rem;
+}
+
+.footer-brand p {
+    color: rgba(255,255,255,.6);
+    font-size: .9rem;
+    margin-bottom: 0;
+}
+
+.footer-copy {
+    color: rgba(255,255,255,.35);
+    font-size: .8rem;
+    border-top: 1px solid rgba(255,255,255,.1);
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products-section {
+        padding: 4rem 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}

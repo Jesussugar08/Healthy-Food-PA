@@ -1,121 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hype</title>
-    <link rel="stylesheet" href="Estilo.css">
+    <title>Healthy Food PA — Productos Saludables en Panama</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/Estilo.css">
 </head>
-
-
-
-
-
 <body>
 
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="nav-brand">Healthy Food PA</span>
+            <ul class="nav-links">
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#footer">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
-
-    
-    <header class="up-header">
-        <h1>Productos saludables y donde encontrarlos</h1>
-        <h3>Estas cansado de no saber que comer cuando te dicen que "Tienes que comer bien"? Aqui tienes un sitio que le da toda la informacion de que comer y productos sanos.</h3>
-        <h3>aqui encontraras</h3>
-        <ul class="li-info">
-            <li>Productos saludables</li>
-            <li>Donde encontrarlos</li>
-            <li>Platos que tu mismo puedes preparar en tu casa</li>
-        </ul>
-        
+    <header class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <span class="hero-badge">Guia de alimentacion saludable</span>
+                <h1>Come mejor,<br>vive mejor</h1>
+                <p>¿Cansado de no saber que comer cuando te dicen "tienes que comer bien"? Aqui encontraras todo lo que necesitas sobre productos saludables en Panama.</p>
+                <div class="hero-pills">
+                    <span class="pill">Productos saludables</span>
+                    <span class="pill">Donde encontrarlos</span>
+                    <span class="pill">Recetas caseras</span>
+                </div>
+                <a href="#productos" class="hero-btn">Ver productos</a>
+            </div>
+        </div>
     </header>
 
+    <main>
+        <section id="productos" class="products-section">
+            <div class="section-header">
+                <span class="section-tag">Catalogo</span>
+                <h2>Productos recomendados</h2>
+                <p>Seleccion de productos saludables disponibles en los principales supermercados de Panama.</p>
+            </div>
 
-    
+            <div class="products-grid">
 
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/tosh.jpg" alt="Crema de mani Tosh">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Proteinas</span>
+                        <h3>Crema de Mani Tosh</h3>
+                        <p>Fuente natural de proteinas y grasas saludables. Ideal para el desayuno o merienda.</p>
+                        <div class="card-stores">
+                            <h4>Disponible en</h4>
+                            <ul>
+                                <li>El Machetazo</li>
+                                <li>El Fuerte</li>
+                                <li>Super Extra</li>
+                                <li>Super 99</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
 
-    <section  class="foods">
-        
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/Tortilas-la-real.jpg" alt="Tortillas La Real">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Granos</span>
+                        <h3>Tortillas La Real</h3>
+                        <p>Alternativa saludable al pan tradicional, rica en fibra y nutrientes esenciales.</p>
+                        <div class="card-stores">
+                            <h4>Disponible en</h4>
+                            <ul>
+                                <li>El Machetazo</li>
+                                <li>Super Extra</li>
+                                <li>Super 99</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
 
-        <article class="tosh">
-        <div ><img src="./Picture/tosh.jpg" ></img></div>
-        <h2>Crema de mani tosh</h2>
-        <p>Puedes encontrarla en: </p>
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/CHORI.JPG" alt="Chorizo Berard">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Carnes</span>
+                        <h3>Chorizo Berard</h3>
+                        <p>Chorizo de calidad con menor contenido de grasa, una opcion mas saludable para tu dieta.</p>
+                        <div class="card-stores">
+                            <h4>Disponible en</h4>
+                            <ul>
+                                <li>El Machetazo</li>
+                                <li>Super Extra</li>
+                                <li>Super 99</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
 
-        <ul>
-            <li>El machetazo</li>
-            <li>El fuerte</li>
-            <li>Super extra</li>
-            <li>Super 99</li>
-        </ul>
-        </article>
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/yogurt-griego.jpg" alt="Yogurt Griego Bonlac">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Lacteos</span>
+                        <h3>Yogurt Griego Bonlac</h3>
+                        <p>Alto en proteinas y probioticos, perfecto para fortalecer tu sistema digestivo.</p>
+                        <div class="card-stores">
+                            <h4>Disponible en</h4>
+                            <ul>
+                                <li>El Machetazo</li>
+                                <li>Super Extra</li>
+                                <li>Super 99</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
 
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/Gullon.jpg" alt="Galleta Gullon Chocolate">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Snacks</span>
+                        <h3>Galleta Gullon Chocolate</h3>
+                        <p>Galleta integral con chocolate, sin azucares anadidos. El snack saludable ideal.</p>
+                        <div class="card-stores">
+                            <h4>Disponible en</h4>
+                            <ul>
+                                <li>El Machetazo</li>
+                                <li>Super Extra</li>
+                                <li>Super 99</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
 
-        <article class="tortilla">
-        <div ><img src="./Picture/Tortilas-la-real.jpg" ></img></div>
-        <h2>Tortilas la real</h2>
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/Salchicha.png" alt="Salchicha de Pavo Berard">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">Carnes</span>
+                        <h3>Salchicha de Pavo Berard</h3>
+                        <p>Menor contenido graso que la salchicha tradicional, perfecta para dietas balanceadas.</p>
+                        <div class="card-stores">
+                            <h4>Disponible en</h4>
+                            <ul>
+                                <li>El Machetazo</li>
+                                <li>Super Extra</li>
+                                <li>Super 99</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
 
-        <p>Puedes encontrarla en: </p>
-        <ul>
-            <li>El machetazo</li>
-            <li>Super extra</li>
-            <li>Super 99</li>
-        </ul>
-        </article>
+            </div>
+        </section>
+    </main>
 
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">Healthy Food PA</span>
+                <p>Tu guia de alimentacion saludable en Panama.</p>
+            </div>
+            <p class="footer-copy">&copy; 2026 Healthy Food PA &mdash; Informacion nutricional para todos.</p>
+        </div>
+    </footer>
 
-        <article class="chorizo">
-        <div ><img src="./Picture/CHORI.JPG" ></img></div>
-        <h2>Chorizo berard</h2>
-        
-        <p>Puedes encontrarla en: </p>
-        <ul>
-            <li>El machetazo</li>
-            <li>Super extra</li>
-            <li>Super 99</li>
-        </ul>      
-        </article>
-        
-
-
-        <article class="yogur">
-        <div ><img src="./Picture/yogurt-griego.jpg" ></img></div>
-        <h2>yogurt Griego Bonlac</h2>
-        
-        <p>Puedes encontrarla en: </p>
-        <ul>
-            <li>El machetazo</li>
-            <li>Super extra</li>
-            <li>Super 99</li>
-        </ul>  
-        </article>
-
-        <article class="gullon">
-        <div ><img src="./Picture/Gullon.jpg" ></img></div>
-        <h2>Galleta de chocolate Gullon</h2>
-        
-        <p>Puedes encontrarla en: </p>
-        <ul>
-            <li>El machetazo</li>
-            <li>Super extra</li>
-            <li>Super 99</li>
-        </ul>
-
-        </article>
-
-
-        <article class="Salchicha">
-        <div ><img src="./Picture/Salchicha.png" ></img></div>
-        <h2>Salchicha de pavo Berard</h2>
-        
-        <p>Puedes encontrarla en: </p>
-        <ul>
-            <li>El machetazo</li>
-            <li>Super extra</li>
-            <li>Super 99</li>
-        </ul>  
-        </article>
-
-
-    </section>
 </body>
-
 </html>
